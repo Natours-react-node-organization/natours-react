@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./pages/rootLayout";
 import SettingsRootLayout from "./pages/settingsRootLayout";
 import OverviewPage from "./pages/overview";
-import TourPage from "./pages/tour/tour";
+import TourPage from "./pages/tour/tourPage";
 import Users from "./pages/user/users";
 import EditUser from "./pages/user/editUser";
 import UserDetail from "./pages/user/userDetail";

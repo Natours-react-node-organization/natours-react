@@ -1,8 +1,11 @@
+import TourCard from "../components/tourCard";
+import classes from "./overview.module.css";
+
 function OverviewPage() {
   return (
-    <>
-      <p>This s=is the overview PAGE</p>
-    </>
+    <div className={classes.tours_container}>
+      <TourCard />
+    </div>
   );
 }
 

@@ -1,7 +1,9 @@
+import Tour from "../../components/tour";
+
 function TourPage() {
   return (
     <>
-      <p>This is the tout page</p>
+      <Tour />
     </>
   );
 }
