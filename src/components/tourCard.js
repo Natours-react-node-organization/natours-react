@@ -19,6 +19,7 @@ function TourCard() {
               <span>The Sea Explorer</span>
             </h3>
           </div>
+          <div className={classes.bottom_card}></div>
           <div>
             <div className={classes.tour_text_box}>
               <p className={classes.duration}>Medium 7-day Tour</p>
