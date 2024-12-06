@@ -17,13 +17,13 @@
   left: 50%;
   top: 20%;
   transform: translateX(-50%);
-  width: 43%;
+  width: 40%;
   color: #fff;
   text-transform: uppercase;
   font-weight: 300;
 }
 .tour_title {
-  padding: 1rem 1.5rem;
+  padding: 2rem 1.5rem;
   line-height: 1.6;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
@@ -31,8 +31,8 @@
     linear,
     left top,
     right bottom,
-    from(rgba(107, 193, 228, 0.781)),
-    to(rgba(6, 67, 158, 0.61))
+    from(rgba(107, 194, 228, 0.993)),
+    to(rgb(6, 67, 158))
   );
 }
 .section {
@@ -76,7 +76,8 @@
 }
 .guide_section h2,
 .about h2,
-.fact_section h2 {
+.fact_section h2,
+.cta_text h2 {
   text-transform: uppercase;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -147,6 +148,7 @@
   padding-bottom: 27%;
 }
 /*////////////////////////////////////////////////
+MAP
 ////////////////////////////////////////////////*/
 
 .section_map {
@@ -168,6 +170,9 @@
   bottom: 0;
   width: 100%;
 }
+/*////////////////////////////////////////////////
+REVIEW
+////////////////////////////////////////////////*/
 .section_reviews {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,9 +214,13 @@
   gap: 2.5rem;
 
   position: absolute;
+  list-style-type: none;
   top: 50%;
   transform: translateY(-50%);
   padding-left: 2rem;
+  overflow: auto;
+  white-space: nowrap;
+  padding-bottom: 5rem;
 }
 .review_list {
 }
@@ -220,6 +229,7 @@
   height: 28rem;
   padding: 4rem;
   background-color: #fff;
+  border-radius: 3px;
 }
 .review_owner {
   display: flex;
@@ -229,15 +239,137 @@
   margin-bottom: 2.6rem;
 }
 .review_owner img {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
 }
 .review_owner p {
-  font-size: 1.2rem;
-  padding-left: 2rem;
+  font-size: 1.4rem;
+  padding-left: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .review_text {
   font-size: 1.4rem;
   font-style: italic;
+  font-weight: 100;
+  color: #a1a1a1;
 }
+/*////////////////////////////////////////////////
+CTA
+////////////////////////////////////////////////*/
+.section_cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+
+  margin: 10rem 6rem;
+  padding: 5rem 0;
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+.logo_images {
+  display: flex;
+}
+.cta_logo {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(rgb(107, 194, 228)),
+    to(rgb(59, 114, 195))
+  );
+}
+.cta_logo img {
+  width: 10rem;
+  height: 7rem;
+}
+.cta_logo {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  margin-left: -6rem;
+  z-index: 9;
+}
+.cta_photo {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  margin-left: -11rem;
+}
+.cta_photo1 {
+  z-index: 6;
+}
+
+.cta_text h2 {
+  margin: 0;
+  padding: 0;
+}
+.cta_text {
+  font-size: 1.6rem;
+  font-family: "Times New Roman", Times, serif;
+}
+.cta_btn {
+  margin-right: 6rem;
+}
+.cta_btn button,
+.cta_btn button:link,
+.cta_btn button:visited {
+  font-size: 1.6rem;
+  padding: 1.4rem 3rem;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  font-weight: 400;
+  color: #fff;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /*Add later when we use this for the button in form*/
+  border: none;
+  cursor: pointer;
+
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(rgba(107, 193, 228, 0.781)),
+    to(rgba(6, 67, 158, 0.61))
+  );
+}
+
+.cta_btn button:hover {
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.cta_btn:active {
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* .btn_cta button:focus {
+  outline: none;
+  background-color: #2e864b;
+}
+
+.btn--white {
+  background-color: #fff;
+  color: #777;
+} */

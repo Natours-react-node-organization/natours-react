@@ -1,4 +1,5 @@
 import { CalendarBlank, Users, Star, TrendUp } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
 import TourImg from "../img/tours/tour-2-cover.jpg";
 import TourImg1 from "../img/tours/tour-4-cover.jpg";
 import TourImg2 from "../img/tours/tour-5-cover.jpg";
@@ -6,6 +7,7 @@ import TourImg3 from "../img/tours/tour-6-cover.jpg";
 import User1 from "../img/users/user-3.jpg";
 import User2 from "../img/users/user-4.jpg";
 import User3 from "../img/users/user-5.jpg";
+import logo from "../img/logo-white.png";
 import classes from "./tour.module.css";
 
 function Tour() {
@@ -83,21 +85,21 @@ function Tour() {
         <div>
           <img
             src={TourImg1}
-            alt="A Tour photo"
+            alt="A Tour pic"
             className={`${classes.picture_box__img1} ${classes.picture_box__img}`}
           />
         </div>
         <div>
           <img
             src={TourImg2}
-            alt="A Tour photo"
+            alt="A Tour pic"
             className={`${classes.picture_box__img2} ${classes.picture_box__img}`}
           />
         </div>
         <div>
           <img
             src={TourImg3}
-            alt="A Tour photo"
+            alt="A Tour pic"
             className={`${classes.picture_box__img3} ${classes.picture_box__img}`}
           />
         </div>
@@ -111,7 +113,7 @@ function Tour() {
             <li className={classes.review_list}>
               <div className={classes.review}>
                 <div className={classes.review_owner}>
-                  <img src={User3} alt="Photo of the review owner" />
+                  <img src={User3} alt="Pic of the review owner" />
                   <p>Oponjous Joe</p>
                 </div>
                 <p className={classes.review_text}>
@@ -124,7 +126,7 @@ function Tour() {
             <li className={classes.review_list}>
               <div className={classes.review}>
                 <div className={classes.review_owner}>
-                  <img src={User3} alt="Photo of the review owner" />
+                  <img src={User3} alt="Pic of the review owner" />
                   <p>Oponjous Joe</p>
                 </div>
                 <p className={classes.review_text}>
@@ -137,7 +139,7 @@ function Tour() {
             <li className={classes.review_list}>
               <div className={classes.review}>
                 <div className={classes.review_owner}>
-                  <img src={User3} alt="Photo of the review owner" />
+                  <img src={User3} alt="Pic of the review owner" />
                   <p>Oponjous Joe</p>
                 </div>
                 <p className={classes.review_text}>
@@ -150,7 +152,7 @@ function Tour() {
             <li className={classes.review_list}>
               <div className={classes.review}>
                 <div className={classes.review_owner}>
-                  <img src={User3} alt="Photo of the review owner" />
+                  <img src={User3} alt="Pic of the review owner" />
                   <p>Oponjous Joe</p>
                 </div>
                 <p className={classes.review_text}>
@@ -163,7 +165,7 @@ function Tour() {
             <li className={classes.review_list}>
               <div className={classes.review}>
                 <div className={classes.review_owner}>
-                  <img src={User3} alt="Photo of the review owner" />
+                  <img src={User3} alt="Pic of the review owner" />
                   <p>Oponjous Joe</p>
                 </div>
                 <p className={classes.review_text}>
@@ -175,6 +177,30 @@ function Tour() {
             </li>
           </ul>
         </div>
+      </section>
+      <section className={classes.section_cta}>
+        <div className={classes.logo_images}>
+          <p className={classes.cta_logo}>
+            <img src={logo} alt="Small logo at the cta section" />
+          </p>
+          <img
+            src={TourImg1}
+            alt="Rounded tour pic at the cta section"
+            className={`${classes.cta_photo} ${classes.cta_photo1}`}
+          />
+          <img
+            src={TourImg3}
+            alt="Rounded tour pic at the cta section"
+            className={classes.cta_photo}
+          />
+        </div>
+        <div className={classes.cta_text}>
+          <h2>What are you waiting for?</h2>
+          <p>7 days. 1 adventure. Infinite memories. Make it yours today!</p>
+        </div>
+        <Link to={"/"} className={classes.cta_btn}>
+          <button type="button">book tour now!</button>
+        </Link>
       </section>
     </>
   );
