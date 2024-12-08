@@ -1,0 +1,58 @@
+.section_settings {
+  background-color: #f0f0f0;
+  padding: 7.5rem 6rem;
+}
+.setting_container {
+  display: grid;
+  grid-template-columns: 27% 1fr;
+}
+.aside {
+  color: #fff;
+  background: linear-gradient(to right, #799ecdda, #0a3e8de6);
+  text-transform: uppercase;
+  min-height: 100vh;
+}
+.aside_ul {
+  margin-left: 4rem;
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.aside_ul a {
+  text-decoration: none;
+  color: #fff;
+}
+.aside_list {
+  list-style-type: none;
+  font-size: 1.4rem;
+  font-weight: 100;
+
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  margin-left: 4rem;
+  /* text-align: center; */
+  letter-spacing: 1.3px;
+}
+.main {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: #fff;
+}
+/*////////////////////////////////////BOOKINGS//////////////*/
+.booked {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  margin-left: 4rem;
+  text-align: center;
+  letter-spacing: 1.3px;
+}

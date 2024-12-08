@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import TourContextProvider from "./store/tour-context";
 import RootLayout from "./pages/rootLayout";
 import SettingsRootLayout from "./pages/settingsRootLayout";
 import OverviewPage from "./pages/overview";
@@ -6,9 +7,10 @@ import TourPage from "./pages/tour/tourPage";
 import Users from "./pages/user/users";
 import EditUser from "./pages/user/editUser";
 import UserDetail from "./pages/user/userDetail";
-import Bookings from "./pages/booking/bookings";
+import BookingsPage from "./pages/booking/bookingsPage";
 import BookingOnTour from "./pages/booking/bookingOnTour";
-import Reviews from "./pages/review/reviews";
+import BillingsPage from "./pages/billing/billingsPage";
+import ReviewsPage from "./pages/review/reviewsPage";
 import ReviewOnTour from "./pages/review/reviewOnTour";
 import Login from "./pages/authentication/login";
 import Signup from "./pages/authentication/signUp";
@@ -59,36 +61,48 @@ const router = createBrowserRouter([
               },
             ],
           },
-        ],
-      },
-      {
-        path: "reviews",
-        element: <SettingsRootLayout />,
-        children: [
           {
-            index: true,
-            element: <Reviews />,
+            path: "booking",
+            element: <BookingsPage />,
           },
           {
-            path: ":tourId",
-            element: <ReviewOnTour />,
+            path: "review",
+            element: <ReviewsPage />,
+          },
+          {
+            path: "billing",
+            element: <BillingsPage />,
           },
         ],
       },
-      {
-        path: "bookings",
-        element: <SettingsRootLayout />,
-        children: [
-          {
-            index: true,
-            element: <Bookings />,
-          },
-          {
-            path: ":bookId",
-            element: <BookingOnTour />,
-          },
-        ],
-      },
+      // {
+      //   path: "reviews",
+      //   element: <SettingsRootLayout />,
+      //   children: [
+      //     {
+      //       index: true,
+      //       element: <Reviews />,
+      //     },
+      //     {
+      //       path: ":tourId",
+      //       element: <ReviewOnTour />,
+      //     },
+      //   ],
+      // },
+      // {
+      //   path: "bookings",
+      //   element: <SettingsRootLayout />,
+      //   children: [
+      //     {
+      //       index: true,
+      //       element: <Bookings />,
+      //     },
+      //     {
+      //       path: ":bookId",
+      //       element: <BookingOnTour />,
+      //     },
+      //   ],
+      // },
       {
         path: "login",
         element: <Login />,
@@ -106,7 +120,13 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router}></RouterProvider>;
+  return (
+    <>
+      <TourContextProvider>
+        <RouterProvider router={router}></RouterProvider>;
+      </TourContextProvider>
+    </>
+  );
 }
 
 export default App;
