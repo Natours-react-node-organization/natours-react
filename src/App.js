@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import TourContextProvider from "./store/tour-context";
+// import TourContextProvider from "./store/tour-context";
 import RootLayout from "./pages/rootLayout";
 import SettingsRootLayout from "./pages/settingsRootLayout";
 import OverviewPage from "./pages/overview";
@@ -10,8 +10,8 @@ import UserDetail from "./pages/user/userDetail";
 import BookingsPage from "./pages/booking/bookingsPage";
 import BookingOnTour from "./pages/booking/bookingOnTour";
 import BillingsPage from "./pages/billing/billingsPage";
-import ReviewsPage from "./pages/review/reviewsPage";
-import ReviewOnTour from "./pages/review/reviewOnTour";
+import ReviewsPage from "./pages/reviewsPage";
+import ReviewOnTour from "./components/review/reviewOnTour";
 import Login from "./pages/authentication/login";
 import Signup from "./pages/authentication/signUp";
 
@@ -122,9 +122,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <TourContextProvider>
-        <RouterProvider router={router}></RouterProvider>;
-      </TourContextProvider>
+      <RouterProvider router={router}></RouterProvider>;
     </>
   );
 }

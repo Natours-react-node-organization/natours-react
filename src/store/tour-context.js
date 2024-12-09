@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { DUMMY_REVIEW } from "../pages/review/dummy-review";
+import { DUMMY_REVIEW } from "../components/review/dummy-review";
 
 export const TourContext = createContext({
   tour: [],
@@ -12,7 +12,7 @@ function TourContextProvider({ children }) {
 
   const handleAddReviews = (review) => {
     setStoreReviews((prevState) => {
-      return [review, ...prevState];
+      return { review, ...prevState };
     });
   };
 

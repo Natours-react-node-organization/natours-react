@@ -70,9 +70,7 @@ function SettingsRootLayout() {
             </div>
           </aside>
           <main className={classes.main}>
-            {/* <TourContextProvider> */}
             <Outlet />
-            {/* </TourContextProvider> */}
           </main>
         </div>
       </div>
