@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
-// import TourContextProvider from "../store/tour-context";
 import {
   Gear,
   ShoppingBagOpen,
@@ -12,6 +12,10 @@ import {
 import classes from "./settingsRootLayout.module.css";
 
 function SettingsRootLayout() {
+  const [isDropDawn, setIsDropDawn] = useState(false);
+  const handleDropDawn = () => {
+    setIsDropDawn(!isDropDawn ? true : false);
+  };
   return (
     <>
       <div className={classes.section_settings}>
@@ -50,10 +54,23 @@ function SettingsRootLayout() {
               <h2>Admin</h2>
               <hr />
               <ul className={classes.aside_ul}>
-                <li className={classes.aside_list}>
-                  <Ticket size={22} color="#fff" />
-                  Manage Tour
+                <li onClick={handleDropDawn}>
+                  <p className={classes.aside_list}>
+                    <Ticket size={22} color="#fff" />
+                    Manage Tour
+                  </p>
                 </li>
+                {isDropDawn && (
+                  <ul className={classes.dropdawn_box}>
+                    <Link to={"new"}>
+                      <li onClick={handleDropDawn}>Create New Tour</li>
+                    </Link>
+
+                    <Link to={"manage-tours"}>
+                      <li onClick={handleDropDawn}>Edit Tour</li>
+                    </Link>
+                  </ul>
+                )}
                 <li className={classes.aside_list}>
                   <Users size={22} color="#fff" />
                   Manage Users

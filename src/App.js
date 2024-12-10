@@ -7,13 +7,16 @@ import TourPage from "./pages/tour/tourPage";
 import Users from "./pages/user/users";
 import EditUser from "./pages/user/editUser";
 import UserDetail from "./pages/user/userDetail";
-import BookingsPage from "./pages/booking/bookingsPage";
-import BookingOnTour from "./pages/booking/bookingOnTour";
-import BillingsPage from "./pages/billing/billingsPage";
+import BookingsPage from "./pages/bookingsPage";
+import BookingOnTour from "./components/booking/bookingOnTour";
+import BillingsPage from "./pages/billingsPage";
 import ReviewsPage from "./pages/reviewsPage";
 import ReviewOnTour from "./components/review/reviewOnTour";
-import Login from "./pages/authentication/login";
-import Signup from "./pages/authentication/signUp";
+import Login from "./pages/loginPage";
+import Signup from "./pages/signUpPage";
+import ManageToursPage from "./pages/manageTourPage";
+import CreateTourPage from "./pages/createTourPage";
+import EditTourPage from "./pages/editTourPage";
 
 import "./App.css";
 
@@ -73,36 +76,27 @@ const router = createBrowserRouter([
             path: "billing",
             element: <BillingsPage />,
           },
+          {
+            path: "new",
+            element: <CreateTourPage />,
+          },
+          {
+            path: "manage-tours",
+            // element: <ManageToursPage />,
+            children: [
+              {
+                index: true,
+                element: <ManageToursPage />,
+              },
+              {
+                path: "edit",
+                element: <EditTourPage />,
+              },
+            ],
+          },
         ],
       },
-      // {
-      //   path: "reviews",
-      //   element: <SettingsRootLayout />,
-      //   children: [
-      //     {
-      //       index: true,
-      //       element: <Reviews />,
-      //     },
-      //     {
-      //       path: ":tourId",
-      //       element: <ReviewOnTour />,
-      //     },
-      //   ],
-      // },
-      // {
-      //   path: "bookings",
-      //   element: <SettingsRootLayout />,
-      //   children: [
-      //     {
-      //       index: true,
-      //       element: <Bookings />,
-      //     },
-      //     {
-      //       path: ":bookId",
-      //       element: <BookingOnTour />,
-      //     },
-      //   ],
-      // },
+
       {
         path: "login",
         element: <Login />,

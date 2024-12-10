@@ -25,10 +25,14 @@
   text-decoration: none;
   color: #fff;
 }
+.aside_ul li {
+  list-style-type: none;
+}
 .aside_list {
   list-style-type: none;
   font-size: 1.4rem;
   font-weight: 100;
+  cursor: pointer;
 
   display: flex;
   align-items: center;
@@ -55,4 +59,22 @@ h2 {
   margin-left: 4rem;
   text-align: center;
   letter-spacing: 1.3px;
+}
+/*/ ////////////////////////// DROPDAWN //////////////////////*/
+.dropdawn_box {
+  margin-left: 3.5rem;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.dropdawn_box li {
+  margin-left: 8rem;
+  list-style-type: none;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
 }

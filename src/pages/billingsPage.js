@@ -1,4 +1,4 @@
-import classes from "../settingsRootLayout.module.css";
+import classes from "./settingsRootLayout.module.css";
 
 function BillingsPage() {
   return (
