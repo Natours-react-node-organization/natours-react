@@ -17,8 +17,12 @@ import Signup from "./pages/signUpPage";
 import ManageToursPage from "./pages/manageTourPage";
 import CreateTourPage from "./pages/createTourPage";
 import EditTourPage from "./pages/editTourPage";
-
+import UserBooking from "./pages/admin/userBooking";
+import UserReview from "./pages/admin/userReview";
+import AboutUser from "./pages/admin/aboutUser";
+import Delivered from "./pages/admin/delivered";
 import "./App.css";
+import ManageUsersPage from "./pages/manageUsersPage";
 
 const router = createBrowserRouter([
   {
@@ -91,6 +95,44 @@ const router = createBrowserRouter([
               {
                 path: "edit",
                 element: <EditTourPage />,
+              },
+            ],
+          },
+          {
+            path: "manage-users",
+            element: <ManageUsersPage />,
+          },
+          {
+            path: ":userId",
+            children: [
+              {
+                index: true,
+                element: <ManageUsersPage />,
+              },
+              {
+                path: "edit",
+                element: <EditUser />,
+                // },
+                // {
+                //   path: ":infoId",
+                children: [
+                  {
+                    index: true,
+                    element: <AboutUser />,
+                  },
+                  {
+                    path: "delivered",
+                    element: <Delivered />,
+                  },
+                  {
+                    path: "booking",
+                    element: <UserBooking />,
+                  },
+                  {
+                    path: "review",
+                    element: <UserReview />,
+                  },
+                ],
               },
             ],
           },

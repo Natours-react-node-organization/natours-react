@@ -71,18 +71,18 @@ function SettingsRootLayout() {
                     </Link>
                   </ul>
                 )}
-                <li className={classes.aside_list}>
+                <Link to={"manage-users"} className={classes.aside_list}>
                   <Users size={22} color="#fff" />
                   Manage Users
-                </li>
-                <li className={classes.aside_list}>
+                </Link>
+                <Link className={classes.aside_list}>
                   <Star size={22} color="#fff" />
                   Manage Reviews
-                </li>
-                <li className={classes.aside_list}>
+                </Link>
+                <Link className={classes.aside_list}>
                   <ShoppingBagOpen size={22} color="#fff" />
                   manage booking
-                </li>
+                </Link>
               </ul>
             </div>
           </aside>
