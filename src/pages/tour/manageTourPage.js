@@ -1,4 +1,4 @@
-import TourCard from "../components/tour/adminTourCard";
+import TourCard from "../../components/tour/adminTourCard";
 function ManageToursPage() {
   return (
     <>

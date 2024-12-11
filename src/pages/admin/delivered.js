@@ -1,8 +1,6 @@
+import OrderCard from "../../components/orderCard";
+
 function Delivered() {
-  return (
-    <>
-      <p>Delivered</p>
-    </>
-  );
+  return <OrderCard />;
 }
 export default Delivered;

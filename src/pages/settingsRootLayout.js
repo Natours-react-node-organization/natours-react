@@ -75,11 +75,11 @@ function SettingsRootLayout() {
                   <Users size={22} color="#fff" />
                   Manage Users
                 </Link>
-                <Link className={classes.aside_list}>
+                <Link to={"manage-review"} className={classes.aside_list}>
                   <Star size={22} color="#fff" />
                   Manage Reviews
                 </Link>
-                <Link className={classes.aside_list}>
+                <Link to={"manage-booking"} className={classes.aside_list}>
                   <ShoppingBagOpen size={22} color="#fff" />
                   manage booking
                 </Link>

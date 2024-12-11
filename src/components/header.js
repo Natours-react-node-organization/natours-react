@@ -12,11 +12,11 @@ function Header() {
         <img src={logo} alt="Logo" className={classes.logo} />
         <nav>
           <p className={classes.login}>
-            <Link to="#">Login</Link>
+            <Link to="login">Login</Link>
           </p>
-          <button className={classes.signup}>
-            <a href="#">Sign Up</a>
-          </button>
+          <a href="#" className={classes.signup}>
+            Sign Up
+          </a>
         </nav>
       </div>
     </>

@@ -14,15 +14,17 @@ import ReviewsPage from "./pages/reviewsPage";
 import ReviewOnTour from "./components/review/reviewOnTour";
 import Login from "./pages/loginPage";
 import Signup from "./pages/signUpPage";
-import ManageToursPage from "./pages/manageTourPage";
-import CreateTourPage from "./pages/createTourPage";
-import EditTourPage from "./pages/editTourPage";
+import ManageToursPage from "./pages/tour/manageTourPage";
+import CreateTourPage from "./pages/tour/createTourPage";
+import EditTourPage from "./pages/tour/editTourPage";
 import UserBooking from "./pages/admin/userBooking";
 import UserReview from "./pages/admin/userReview";
 import AboutUser from "./pages/admin/aboutUser";
 import Delivered from "./pages/admin/delivered";
+import ManageReview from "./pages/admin/manageReview";
+import ManageBooking from "./pages/admin/manageBooking";
 import "./App.css";
-import ManageUsersPage from "./pages/manageUsersPage";
+import ManageUsersPage from "./pages/user/manageUsersPage";
 
 const router = createBrowserRouter([
   {
@@ -135,6 +137,14 @@ const router = createBrowserRouter([
                 ],
               },
             ],
+          },
+          {
+            path: "manage-review",
+            element: <ManageReview />,
+          },
+          {
+            path: "manage-booking",
+            element: <ManageBooking />,
           },
         ],
       },

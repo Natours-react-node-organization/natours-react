@@ -1,8 +1,6 @@
+import OrderCard from "../../components/orderCard";
+
 function UserBooking() {
-  return (
-    <>
-      <p>UserBooking</p>
-    </>
-  );
+  return <OrderCard />;
 }
 export default UserBooking;
