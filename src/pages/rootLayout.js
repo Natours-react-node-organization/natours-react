@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/header";
+import Logo from "../img/logo-green.png";
 import classes from "./rootLayout.module.css";
 function RootLayout() {
   return (
@@ -9,7 +10,7 @@ function RootLayout() {
         <Outlet />
       </div>
       <footer>
-        <img src="" alt="Footer logo" />
+        <img src={Logo} alt="Footer logo" />
         <div>
           <div className={classes.footer_links}>
             <p> About us</p>

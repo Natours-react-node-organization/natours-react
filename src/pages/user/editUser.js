@@ -1,11 +1,5 @@
-import {
-  User,
-  Cardholder,
-  ShoppingBagOpen,
-  Star,
-  CreditCard,
-} from "@phosphor-icons/react";
-import { Link, Outlet } from "react-router-dom";
+import { User, ShoppingBagOpen, Star, CreditCard } from "@phosphor-icons/react";
+import { NavLink, Outlet } from "react-router-dom";
 import Profile from "../../img/users/user-15.jpg";
 import classes from "./editUser.module.css";
 
@@ -14,32 +8,53 @@ function EditUser() {
     <>
       <h1 className={classes.userhead}>Manage User</h1>
       <div className={classes.user_container}>
-        <div className={classes.menu}>
-          <Link to={""} className={classes.menu_link}>
-            <p className={classes.menu_item}>
+        <ul className={classes.menu}>
+          <NavLink
+            to={""}
+            className={(isActive) => (isActive ? classes.active : " ")}
+            end
+          >
+            <p className={`${classes.menu_item} ${classes.menu_link}`}>
               <User size={22} color="#555" />
-              <span>About User</span>
+              <li>
+                <span>About User</span>
+              </li>
             </p>
-          </Link>
-          <Link to={"booking"} className={classes.menu_link}>
-            <p className={classes.menu_item}>
+          </NavLink>
+          <NavLink
+            to={"booking"}
+            // className={(isActive) => (isActive ? classes.active : " ")}
+          >
+            <p className={`${classes.menu_item} ${classes.menu_link}`}>
               <ShoppingBagOpen size={22} color="#555" />
-              <span>Bookings</span>
+              <li>
+                <span>Bookings</span>
+              </li>
             </p>
-          </Link>
-          <Link to={"review"} className={classes.menu_link}>
-            <p className={classes.menu_item}>
+          </NavLink>
+          <NavLink
+            to={"review"}
+            className={(isActive) => (isActive ? classes.active : " ")}
+          >
+            <p className={`${classes.menu_item} ${classes.menu_link}`}>
               <Star size={22} color="#555" />
-              <span>Reviews</span>
+              <li>
+                <span>Reviews</span>
+              </li>
             </p>
-          </Link>
-          <Link to={"delivered"} className={classes.menu_link}>
-            <p className={classes.menu_item}>
+          </NavLink>
+          <NavLink
+            to={"delivered"}
+            className={(isActive) => (isActive ? classes.active : " ")}
+          >
+            <p className={`${classes.menu_item} ${classes.menu_link}`}>
               <CreditCard size={22} color="#555" />
-              <span>Delivered</span>
+              <li>
+                <span>Delivered</span>
+              </li>
             </p>
-          </Link>
-        </div>
+          </NavLink>
+        </ul>
         <aside className={classes.aside}>
           <figure className={classes.profile_photo}>
             <img src={Profile} alt="poto of" />

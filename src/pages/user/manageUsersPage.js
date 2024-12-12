@@ -23,7 +23,7 @@ function ManageUsersPage() {
               <p>paulo@yahoo.com</p>
             </div>
             <p className={classes.delete}>
-              <Trash size={25} color="red" />
+              <Trash size={25} color="#feb5b5" />
             </p>
           </li>
         </Link>
@@ -37,7 +37,7 @@ function ManageUsersPage() {
               <p>muna@gmail.com</p>
             </div>
             <p className={classes.delete}>
-              <Trash size={25} color="red" />
+              <Trash size={25} color="#feb5b5" />
             </p>
           </li>
         </Link>
@@ -51,7 +51,7 @@ function ManageUsersPage() {
               <p>kenendiuwa@gmail.com</p>
             </div>
             <p className={classes.delete}>
-              <Trash size={25} color="red" />
+              <Trash size={25} color="#feb5b5" />
             </p>
           </li>
         </Link>
@@ -65,7 +65,7 @@ function ManageUsersPage() {
               <p>wilson peterson</p>
             </div>
             <p className={classes.delete}>
-              <Trash size={25} color="red" />
+              <Trash size={25} color="#feb5b5" />
             </p>
           </li>
         </Link>
@@ -79,7 +79,7 @@ function ManageUsersPage() {
               <p>mosbaba@natours.io</p>
             </div>
             <p className={classes.delete}>
-              <Trash size={25} color="red" />
+              <Trash size={25} color="#feb5b5" />
             </p>
           </li>
         </Link>
@@ -93,7 +93,7 @@ function ManageUsersPage() {
               <p>osumede@yahoo.com</p>
             </div>
             <p className={classes.delete}>
-              <Trash size={25} color="red" className={classes.icon} />
+              <Trash size={25} color="#feb5b5" className={classes.icon} />
             </p>
           </li>
         </Link>

@@ -14,9 +14,13 @@ function Header() {
           <p className={classes.login}>
             <Link to="login">Login</Link>
           </p>
-          <a href="#" className={classes.signup}>
+          <Link to="signup" href="#" className={classes.signup}>
             Sign Up
-          </a>
+          </Link>
+          <Link to={"users"} className={classes.profile}>
+            <img src={defUser} alt="" />
+            <p>Johnas</p>
+          </Link>
         </nav>
       </div>
     </>

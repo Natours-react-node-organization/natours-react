@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   Gear,
   ShoppingBagOpen,
@@ -22,33 +22,46 @@ function SettingsRootLayout() {
         <div className={classes.setting_container}>
           <aside className={classes.aside}>
             <ul className={classes.aside_ul}>
-              <Link to={"/users"}>
-                <li className={classes.aside_list}>
+              <NavLink
+                to={"/users"}
+                className={({ isActive }) => (isActive ? classes.active : " ")}
+                end
+              >
+                <li className={classes.aside_list} onClick={handleDropDawn}>
                   <Gear size={22} color="#fff" />
                   Settings
                 </li>
-              </Link>
+              </NavLink>
 
-              <Link to={"booking"}>
-                <li className={classes.aside_list}>
+              <NavLink
+                to={"booking"}
+                className={({ isActive }) => (isActive ? classes.active : " ")}
+              >
+                <li className={classes.aside_list} onClick={handleDropDawn}>
                   <ShoppingBagOpen size={22} color="#fff" />
                   My bookings
                 </li>
-              </Link>
+              </NavLink>
 
-              <Link to={"review"}>
-                <li className={classes.aside_list}>
+              <NavLink
+                to={"review"}
+                className={({ isActive }) => (isActive ? classes.active : " ")}
+              >
+                <li className={classes.aside_list} onClick={handleDropDawn}>
                   <Star size={22} color="#fff" />
                   My Reviews
                 </li>
-              </Link>
+              </NavLink>
 
-              <Link to={"billing"}>
-                <li className={classes.aside_list}>
+              <NavLink
+                to={"billing"}
+                className={({ isActive }) => (isActive ? classes.active : " ")}
+              >
+                <li className={classes.aside_list} onClick={handleDropDawn}>
                   <CreditCard size={22} color="#fff" />
                   Billings
                 </li>
-              </Link>
+              </NavLink>
             </ul>
             <div className={classes.section_admin}>
               <h2>Admin</h2>
@@ -62,27 +75,58 @@ function SettingsRootLayout() {
                 </li>
                 {isDropDawn && (
                   <ul className={classes.dropdawn_box}>
-                    <Link to={"new"}>
-                      <li onClick={handleDropDawn}>Create New Tour</li>
-                    </Link>
+                    <NavLink
+                      to={"new"}
+                      className={({ isActive }) =>
+                        isActive ? classes.active : " "
+                      }
+                    >
+                      <li>Create New Tour</li>
+                    </NavLink>
 
-                    <Link to={"manage-tours"}>
-                      <li onClick={handleDropDawn}>Edit Tour</li>
-                    </Link>
+                    <NavLink
+                      to={"manage-tours"}
+                      className={({ isActive }) =>
+                        isActive ? classes.active : " "
+                      }
+                    >
+                      <li>Edit Tour</li>
+                    </NavLink>
                   </ul>
                 )}
-                <Link to={"manage-users"} className={classes.aside_list}>
-                  <Users size={22} color="#fff" />
-                  Manage Users
-                </Link>
-                <Link to={"manage-review"} className={classes.aside_list}>
-                  <Star size={22} color="#fff" />
-                  Manage Reviews
-                </Link>
-                <Link to={"manage-booking"} className={classes.aside_list}>
-                  <ShoppingBagOpen size={22} color="#fff" />
-                  manage booking
-                </Link>
+                <NavLink
+                  to={"manage-users"}
+                  className={({ isActive }) =>
+                    isActive ? classes.active : " "
+                  }
+                >
+                  <li className={classes.aside_list} onClick={handleDropDawn}>
+                    <Users size={22} color="#fff" />
+                    Manage Users
+                  </li>
+                </NavLink>
+                <NavLink
+                  to={"manage-review"}
+                  className={({ isActive }) =>
+                    isActive ? classes.active : " "
+                  }
+                >
+                  <li className={classes.aside_list} onClick={handleDropDawn}>
+                    <Star size={22} color="#fff" />
+                    Manage Reviews
+                  </li>
+                </NavLink>
+                <NavLink
+                  to={"manage-booking"}
+                  className={({ isActive }) =>
+                    isActive ? classes.active : " "
+                  }
+                >
+                  <li className={classes.aside_list} onClick={handleDropDawn}>
+                    <ShoppingBagOpen size={22} color="#fff" />
+                    manage booking
+                  </li>
+                </NavLink>
               </ul>
             </div>
           </aside>

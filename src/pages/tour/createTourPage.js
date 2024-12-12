@@ -1,9 +1,5 @@
 function CreateTourPage() {
-  return (
-    <>
-      <p>CreateTourPage</p>
-    </>
-  );
+  return <></>;
 }
 
 export default CreateTourPage;
