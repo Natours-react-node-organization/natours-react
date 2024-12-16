@@ -12,10 +12,11 @@ import BookingOnTour from "./components/booking/bookingOnTour";
 import BillingsPage from "./pages/billingsPage";
 import ReviewsPage from "./pages/reviewsPage";
 import ReviewOnTour from "./components/review/reviewOnTour";
-import Login from "./pages/loginPage";
+import Login, { action as loginAction } from "./pages/loginPage";
 import Signup from "./pages/signUpPage";
 import ManageToursPage from "./pages/tour/manageTourPage";
 import CreateTourPage from "./pages/tour/createTourPage";
+import { action as CreateTourAction } from "./components/createTourForm";
 import EditTourPage from "./pages/tour/editTourPage";
 import UserBooking from "./pages/admin/userBooking";
 import UserReview from "./pages/admin/userReview";
@@ -85,6 +86,7 @@ const router = createBrowserRouter([
           {
             path: "new",
             element: <CreateTourPage />,
+            action: CreateTourAction,
           },
           {
             path: "manage-tours",
@@ -152,6 +154,7 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+        action: loginAction,
       },
       {
         path: "signup",

@@ -1,18 +1,22 @@
 import { Form, Link } from "react-router-dom";
+import { useRef } from "react";
 import classes from "./loginPage.module.css";
 
 function Login() {
+  const emailRef = useRef();
+  const passRef = useRef();
   return (
     <>
-      <form className={classes.form}>
+      <Form method="post" className={classes.form}>
         <h1>LOG into your account</h1>
         <div className={classes.data_box}>
           <label htmlFor="email ">Email address</label>
-          <input id="email" type="email" name="email" />
+          <input id="email" ref={emailRef} type="email" name="email" />
         </div>
         <div className={classes.data_box}>
           <label htmlFor="passwod ">Password</label>
           <input
+            ref={passRef}
             id="passwod"
             type="password"
             name="passwod"
@@ -28,8 +32,13 @@ function Login() {
           </Link>
           <button className={classes.login}>Login</button>
         </p>
-      </form>
+      </Form>
     </>
   );
 }
 export default Login;
+
+export async function action({ request, params }) {
+  const data = request.formData();
+  console.log(data);
+}
